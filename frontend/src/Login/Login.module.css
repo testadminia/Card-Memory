@@ -1,41 +1,112 @@
 .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 1rem;
+  }
+  
+  .loginBox {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    text-align: center;
-}
-
-.input {
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-}
-
-.button {
-    padding: 10px 15px;
-    border-radius: 4px;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-}
-
-.loginButton {
-    background-color: #007bff;
-}
-
-.registerButton {
-    background-color: #6c757d;
-}
-
-.error {
-    color: red;
     text-align: center;
-}
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .welcomeText {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 10px;
+    color: #555;
+  }
+  
+  .input {
+    width: calc(100% - 24px); /* Ensures input fits within padding */
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .input:focus {
+    outline: none;
+    border-color: #6c63ff;
+    box-shadow: 0px 0px 5px rgba(108, 99, 255, 0.5);
+  }
+  
+  .button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(90deg, #6c63ff, #9c63ff);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .button:hover {
+    background: linear-gradient(90deg, #5a57d4, #8a57d4);
+  }
+  
+  .registerText {
+    font-size: 1rem;
+    margin-top: 15px;
+  }
+  
+  .registerText a {
+    color: #6c63ff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .registerText a:hover {
+    text-decoration: underline;
+  }
+
+  .button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+  
+  
+  /* Responsive Design */
+  @media screen and (max-width: 480px) {
+    .loginBox {
+      padding: 1.5rem;
+      max-width: 90%;
+      background: none;
+      box-shadow: none;
+    }
+  
+    .input {
+      width: 90%;
+      font-size: 0.9rem;
+    }
+  
+    .button {
+      font-size: 0.9rem;
+    }
+  
+    .logo {
+      font-size: 1.5rem;
+    }
+  
+    .welcomeText {
+      font-size: 1rem;
+    }
+  }
